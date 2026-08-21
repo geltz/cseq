@@ -14,6 +14,7 @@ pairs nicely with [audiomap](https://github.com/geltz/audiomap) for quick drag-a
 **filetypes**
 
 `wav`, `flac`, `mp3` (audio)
+
 `csq` (module project)
 
 **controls**

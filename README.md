@@ -72,7 +72,7 @@ pairs nicely with [audiomap](https://github.com/geltz/audiomap) for quick drag-a
 | lo-fi engine | bit-depth reduction and soft saturation reconstruction filter |
 | master export | normalized 32-bit float wav rendering with soft saturation limiter |
 
-this program was primarily written using [Gemini 3.7 Flash](deepmind.google/models/model-cards/gemini-3-7-flash/)
+this program was primarily written using [Gemini 3.7 Flash](https://deepmind.google/models/model-cards/gemini-3-7-flash/)
 
 **libraries used**
 

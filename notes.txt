@@ -1,3 +1,5 @@
+(These notes are written for version 1.0)  
+
 The final executable sits at roughly 750 KB raw and compresses down to ~300 KB
 via UPX. The small footprint comes down to a few specific architectural choices:
 

@@ -1,5 +1,5 @@
 <p>
-  <img src="icon.png" alt="cseq icon" width="128">
+  <img src="icon.png" alt="cseq icon">
 </p>
 
 cseq is a lightweight audio sampler and timeline sequencer canvas.  

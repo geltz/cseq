@@ -46,7 +46,7 @@ pairs nicely with [audiomap](https://github.com/geltz/audiomap) for quick drag-a
 | [ / ] | adjust 16th-note swing amount |
 | q | toggle 1/16 snap quantize |
 | s | split selected clips at playhead |
-| l | toggle lo-fi warmth filter |
+| l | toggle lo-fi 12-bit effect |
 | ctrl + c / v / x | copy / paste / cut selected clips |
 | ctrl + z / y | undo / redo action |
 | ctrl + a / d | select all / deselect all clips |

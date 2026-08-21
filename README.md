@@ -74,4 +74,6 @@ pairs nicely with [audiomap](https://github.com/geltz/audiomap) for quick drag-a
 
 this program was primarily written using [Gemini 3.7 Flash](deepmind.google/models/model-cards/gemini-3-7-flash/).
 
-this program makes use of ported [Airwindows](https://github.com/airwindows/airwindows) code (SmoothEQ3) for it's parametric equalizer.
+**libraries used**
+[miniaudio](https://github.com/mackron/miniaudio) for all resampling/audio related work
+[Airwindows](https://github.com/airwindows/airwindows) code ported to C for the parametric equalizer (SmoothEQ3) 

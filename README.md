@@ -77,4 +77,5 @@ this program was primarily written using [Gemini 3.7 Flash](deepmind.google/mode
 **libraries used**
 
 [miniaudio](https://github.com/mackron/miniaudio) for all resampling/audio related work
+
 [Airwindows](https://github.com/airwindows/airwindows) code ported to C for the parametric equalizer (SmoothEQ3) 

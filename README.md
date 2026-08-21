@@ -2,8 +2,8 @@
   <img src="icon.png" alt="cseq icon">
 </p>
 
-cseq is a lightweight audio sampler and timeline sequencer canvas
-.  
+cseq is an audio sampler and timeline sequencer canvas.
+
 written in pure c and win32, packed into a standalone binary that's around 300 kilobytes in filesize.
 
 there's a built-in menu with all the keyboard/mouse shortcuts.

@@ -48,8 +48,11 @@ static inline void audio_callback(ma_device* pDevice, void* pOutput, const void*
 
         for (int i = 0; i < g_Seq.clipCount; ++i) {
             Clip* c = &g_Seq.clips[i];
-            if (c->track < 0 || c->track >= g_Seq.trackCount || g_Seq.trackMuted[c->track] || 
-                curBeat < c->startBeat || curBeat >= c->startBeat + c->lengthBeats || c->startBeat >= maxBeats) 
+            if (c->track < 0 || c->track >= g_Seq.trackCount || g_Seq.trackMuted[c->track] || c->startBeat >= maxBeats) 
+                continue;
+
+            float swungStart = apply_clip_swing(c->startBeat, swing);
+            if (curBeat < swungStart || curBeat >= swungStart + c->lengthBeats) 
                 continue;
             
             if (c->sampleIndex < 0 || c->sampleIndex >= g_Seq.sampleCount)
@@ -59,7 +62,7 @@ static inline void audio_callback(ma_device* pDevice, void* pOutput, const void*
             if (!s->loaded || !s->pFrames || s->frameCount == 0) continue;
             
             float pRate = (c->playbackRate > 0.01f) ? c->playbackRate : 1.0f;
-            float localBeat = curBeat - c->startBeat;
+            float localBeat = curBeat - swungStart;
             double srcPos = (double)c->sampleOffsetFrames + (double)localBeat * fpb * pRate;
             ma_uint64 srcFrame = (ma_uint64)srcPos;
             if (srcFrame + 1 >= s->frameCount) continue;
@@ -71,6 +74,7 @@ static inline void audio_callback(ma_device* pDevice, void* pOutput, const void*
             sampleL *= c->volume; 
             sampleR *= c->volume;
 
+            // User Fade-in and Fade-out envelopes
             if (c->fadeInBeats > 0.0001f && localBeat < c->fadeInBeats) { 
                 sampleL *= (localBeat / c->fadeInBeats); 
                 sampleR *= (localBeat / c->fadeInBeats); 
@@ -82,6 +86,7 @@ static inline void audio_callback(ma_device* pDevice, void* pOutput, const void*
                 sampleR *= g; 
             }
 
+            // Anti-click micro-ramp (64 samples) at clip boundaries
             float framesFromStart = (float)(localBeat * fpb);
             float framesFromEnd = (float)((c->lengthBeats - localBeat) * fpb);
             float microFade = 1.0f;

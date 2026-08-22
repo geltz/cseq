@@ -4,8 +4,6 @@
 
 **cseq** is an audio sampler and timeline sequencer. One standalone binary written in pure C99 and Win32.  
 
-Pairs nicely with [audiomap](https://github.com/geltz/audiomap) for quick drag‑and‑drop sample arrangement.
-
 ---
 
 ### Supported filetypes

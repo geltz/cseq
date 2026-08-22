@@ -4,7 +4,7 @@
 
 **cseq** is an audio sampler and timeline sequencer. One standalone binary (~200 KB) written in pure C and Win32.
 
-There is a built-in menu for all the **keybinds**.
+There is a built-in menu for most **keybinds** and **mouse controls**.
 
 Pairs nicely with [audiomap](https://github.com/geltz/audiomap) for quick drag‑and‑drop sample arrangement.
 
@@ -14,6 +14,32 @@ Pairs nicely with [audiomap](https://github.com/geltz/audiomap) for quick drag�
 
 - Audio: `wav`, `flac`, `mp3`
 - Project: `csq` (self‑contained)
+
+---
+
+### Keyboard shortcuts
+
+| Key | Action |
+| :--- | :--- |
+| `Space` / `Enter` | Play / pause |
+| `Home` / `End` | Jump to start / Stop & reset |
+| `Shift+Home` | Toggle playhead mode (start vs cursor) |
+| `+` / `-` | BPM ±2 |
+| `<` / `>` | Bars ±1 |
+| `[` / `]` | Swing ±5% |
+| `Q` | Toggle 1/16 snap |
+| `S` | Split selected clips at playhead |
+| `L` | Toggle lo‑fi |
+| `Ctrl+C` / `V` / `X` | Copy / paste / cut |
+| `Ctrl+Z` / `Y` | Undo / redo |
+| `Ctrl+A` / `D` | Select all / deselect all |
+| `Ctrl+T` / `Shift+T` | Add / remove track |
+| `Ins` | Import audio at playhead |
+| `Del` | Delete selected clips |
+| `PgUp` / `PgDn` | Zoom timeline |
+| `Arrows` | Scroll / navigate |
+| `Ctrl+S` / `O` | Save / load project (`.csq`) |
+| `E` | Export loop as 32‑bit WAV |
 
 ---
 

@@ -26,6 +26,7 @@ Pairs nicely with [audiomap](https://github.com/geltz/audiomap) for quick drag�
 | Ctrl + drag clip | Duplicate clip |
 | Alt + drag clip | Slip‑edit sample offset |
 | Shift + drag / wheel | Adjust clip volume |
+| Shift + scroll clip | Adjust clip playback rate |
 | Drag fade handle | Adjust fade‑in / fade‑out envelopes |
 | Right‑click clip | Clip context menu (rate, fades, reset volume, delete) |
 | Right‑click track | Track menu (EQ, mute, batch rate/fades, clear) |

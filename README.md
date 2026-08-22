@@ -81,4 +81,4 @@
 
 ---
 
-*This program was primarily written using LLMs.*
+*This program was primarily written using large language models.*

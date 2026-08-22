@@ -4,6 +4,9 @@
 The final executable sits at roughly 750 KB raw and compresses down to ~200 KB
 via UPX. The small footprint comes down to a few specific architectural choices:
 
+The UI renders using FNV1-a mixing to prevent flickering, as defined in cseq_ui.h
+It computes a deterministic hash in one x86 cycle.  
+
 1. Runtime and dependency minimization
 
   - Pure C99 over C++:

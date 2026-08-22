@@ -2,9 +2,7 @@
   <img src="icon.png" alt="cseq icon">
 </p>
 
-**cseq** is an audio sampler and timeline sequencer. One standalone binary written in pure C99 and Win32.
-
-There is a built-in menu for most **keybinds** and **mouse controls**.
+**cseq** is an audio sampler and timeline sequencer. One standalone binary written in pure C99 and Win32.  
 
 Pairs nicely with [audiomap](https://github.com/geltz/audiomap) for quick drag‑and‑drop sample arrangement.
 

@@ -4,7 +4,7 @@
 
 cseq is an audio sampler and timeline sequencer canvas.  
 
-written in pure c and win32, packed into a standalone binary that's around 300 kilobytes in filesize.
+written in pure c and win32, packed into a standalone binary that's around 200 kilobytes in filesize.
 
 there's a built-in menu with all the keyboard/mouse shortcuts.
 

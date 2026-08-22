@@ -2,80 +2,58 @@
   <img src="icon.png" alt="cseq icon">
 </p>
 
-cseq is an audio sampler and timeline sequencer canvas.  
+**cseq** is an audio sampler and timeline sequencer – a standalone binary (~200 KB) written in pure C and Win32.
 
-written in pure c and win32, packed into a standalone binary that's around 200 kilobytes in filesize.
+Pairs nicely with [audiomap](https://github.com/geltz/audiomap) for quick drag‑and‑drop sample arrangement.
 
-there's a built-in menu with all the keyboard/mouse shortcuts.
+---
 
+### Supported filetypes
 
-pairs nicely with [audiomap](https://github.com/geltz/audiomap) for quick drag-and-drop sample arrangement.
+- Audio: `wav`, `flac`, `mp3`
+- Project: `csq` (self‑contained)
 
-**filetypes**
+---
 
-`wav`, `flac`, `mp3` (audio)
+### Mouse controls
 
-`csq` (module project)
-
-**controls**
-
-| input | action |
+| Interaction | Action |
 | :--- | :--- |
-| left drag clip | move clip across timeline and tracks |
-| left/right edge drag | trim clip start / end |
-| ctrl + drag clip | duplicate clip |
-| alt + drag clip | slip edit sample offset |
-| shift + drag clip / wheel | adjust clip volume level |
-| clip handle drag | adjust fade-in / fade-out envelopes |
-| right click clip | clip context menu (playback rate, fades, reset volume, delete) |
-| right click track | track menu (parametric eq, mute, batch rates, batch fades, clear) |
-| left/right drag (empty) | marquee box select clips |
-| middle click drag | pan viewport smoothly |
-| scroll wheel (header) | adjust track volume level |
-| drag and drop | drop audio files directly onto tracks |
+| Left‑drag clip | Move clip across timeline / tracks |
+| Edge drag (left/right) | Trim clip start / end |
+| Ctrl + drag clip | Duplicate clip |
+| Alt + drag clip | Slip‑edit sample offset |
+| Shift + drag / wheel | Adjust clip volume |
+| Drag fade handle | Adjust fade‑in / fade‑out envelopes |
+| Right‑click clip | Clip context menu (rate, fades, reset volume, delete) |
+| Right‑click track | Track menu (EQ, mute, batch rate/fades, clear) |
+| Left/right drag (empty area) | Marquee selection |
+| Middle‑click drag | Pan viewport |
+| Drop audio file | Import sample directly onto a track |
 
-**keys**
+---
 
-| key | action |
+### Features
+
+| Component | Description |
 | :--- | :--- |
-| space / enter | toggle playback |
-| home / end | return to start / stop playback & reset |
-| shift + home | toggle playhead mode (from start / cursor) |
-| + / - | adjust tempo (+/- 2 bpm) |
-| < / > | change loop bar count (+/- 1 bar) |
-| [ / ] | adjust 16th-note swing amount |
-| q | toggle 1/16 snap quantize |
-| s | split selected clips at playhead |
-| l | toggle lo-fi 12-bit effect |
-| ctrl + c / v / x | copy / paste / cut selected clips |
-| ctrl + z / y | undo / redo action |
-| ctrl + a / d | select all / deselect all clips |
-| ctrl + t / shift + t | add / remove track |
-| ins | import audio file at playhead |
-| del | delete selected clips |
-| pgup / pgdn | zoom timeline in / out |
-| arrow keys | scroll timeline / navigate tracks |
-| ctrl + s / o | save / load project (`.csq`) |
-| e | export loop to 32-bit float wav |
+| **Parametric track EQ** | Per‑track 3‑band interactive EQ with live curve & Q adjustment |
+| **Fast `.csq` project format** | Self‑contained saving with background compressed audio bundling |
+| **Interactive fade envelopes** | Drag‑and‑drop fade handles directly on clip waveforms |
+| **Zero‑crossing snap** | Automatic click‑free slicing, boundary ramps, and split alignment |
+| **Non‑destructive slip** | Slide audio within clip boundaries without moving timeline triggers |
+| **Custom rate scaling** | Per‑clip and per‑track speed/pitch from 0.01× to 2.00× |
+| **Dynamic swing & snap** | MPC‑style 16th‑note timing with grid snap |
+| **Lo‑fi engine** | Bit‑depth reduction + soft reconstruction filter |
+| **Master export** | Normalised 32‑bit float WAV rendering with soft‑clamp limiter |
 
-**features**
+---
 
-| component | description |
-| :--- | :--- |
-| parametric track eq | per-track interactive 3-band parametric eq with live curve rendering & q adjustment |
-| fast `.csq` project format | self-contained project saving with background compressed audio bundling |
-| interactive fade envelopes | visual drag-and-drop fade in and fade out handles directly on clip waveforms |
-| zero-crossing snap | automatic click-free sample slicing, boundary ramping, and split alignment |
-| non-destructive slip | slide audio within clip boundaries without moving timeline triggers |
-| custom rate scaling | per-clip and per-track playback speed/pitch control from 0.01x to 2.00x |
-| dynamic swing & snap | mpc-style 16th upbeat timing with 1/16th beat snap grid |
-| lo-fi engine | bit-depth reduction and soft saturation reconstruction filter |
-| master export | normalized 32-bit float wav rendering with soft saturation limiter |
+### Libraries
 
-this program was primarily written using [Gemini 3.7 Flash](https://deepmind.google/models/model-cards/gemini-3-7-flash/)
+- [miniaudio](https://github.com/mackron/miniaudio) – audio resampling / I/O  
+- [Airwindows](https://github.com/airwindows/airwindows) – SmoothEQ3 parametric EQ (ported to C)
 
-**libraries used**
+---
 
-[miniaudio](https://github.com/mackron/miniaudio) for all resampling/audio related work
-
-[Airwindows](https://github.com/airwindows/airwindows) code ported to C for the parametric equalizer (SmoothEQ3) 
+*This program was primarily written using [Gemini 3.7 Flash](https://deepmind.google/models/model-cards/gemini-3-7-flash/).*

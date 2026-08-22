@@ -81,4 +81,4 @@
 
 ---
 
-*This program was primarily written using [Gemini 3.7 Flash](https://deepmind.google/models/model-cards/gemini-3-7-flash/).*
+*This program was primarily written using LLMs.*

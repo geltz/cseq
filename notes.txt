@@ -3,7 +3,7 @@
 The UI renders using FNV1-a mixing to prevent flicker, as defined in cseq_ui.h
 It computes a deterministic hash in one x86 cycle. 
 
-The final executable sits at roughly 750 KB raw and compresses down to ~200 KB
+The final executable sits at roughly 600 KB raw and compresses down to ~200 KB
 via UPX. The small footprint comes down to a few specific architectural choices:
 
 1. Runtime and dependency minimization
@@ -77,7 +77,7 @@ via UPX. The small footprint comes down to a few specific architectural choices:
     on complex heap allocation code.
 
   - UPX packing:
-    The initialized code and data sections of the 750 KB PE binary are
+    The initialized code and data sections of the 600 KB PE binary are
     compressed using UPX. At startup, the stub unpacks the program into memory
     with negligible launch latency, bringing the final distribution size down
     to ~200 KB.

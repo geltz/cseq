@@ -1,6 +1,7 @@
-(These notes are written for version 1.0)  
+(These notes are written for version 1.1)  
+- Update: compile flag uses system C runtime to further reduce filesize.  
 
-The final executable sits at roughly 750 KB raw and compresses down to ~300 KB
+The final executable sits at roughly 750 KB raw and compresses down to ~200 KB
 via UPX. The small footprint comes down to a few specific architectural choices:
 
 1. Runtime and dependency minimization
@@ -77,4 +78,4 @@ via UPX. The small footprint comes down to a few specific architectural choices:
     The initialized code and data sections of the 750 KB PE binary are
     compressed using UPX. At startup, the stub unpacks the program into memory
     with negligible launch latency, bringing the final distribution size down
-    to ~300 KB.
+    to ~200 KB.

@@ -1,5 +1,4 @@
 (These notes are written for version 1.1)  
-- Update: compile flag uses system C runtime to further reduce filesize.  
 
 The UI renders using FNV1-a mixing to prevent flicker, as defined in cseq_ui.h
 It computes a deterministic hash in one x86 cycle. 

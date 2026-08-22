@@ -2,7 +2,9 @@
   <img src="icon.png" alt="cseq icon">
 </p>
 
-**cseq** is an audio sampler and timeline sequencer. One standalone binary written in pure C99 and Win32.  
+**cseq** is an audio sampler and timeline sequencer. 
+
+It's a single binary written in pure C99 and Win32.   
 
 ---
 

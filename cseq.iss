@@ -1,7 +1,7 @@
 [Setup]
 AppId={{E4F14619-EDF4-4CCB-BBF9-251730C00B4A}
 AppName=cseq
-AppVersion=1.0
+AppVersion=1.2
 AppPublisher=geltz
 DefaultDirName={autopf}\cseq
 UsePreviousAppDir=no
@@ -11,7 +11,7 @@ UninstallDisplayIcon={app}\cseq.ico
 Compression=lzma2/ultra64
 SolidCompression=yes
 OutputDir=.
-OutputBaseFilename=cseq_setup_1.0
+OutputBaseFilename=cseq_setup_1.2
 WizardStyle=modern
 ChangesAssociations=no
 DirExistsWarning=no
